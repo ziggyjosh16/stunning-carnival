@@ -2,7 +2,7 @@ from sqlite3 import Timestamp
 from datetime import datetime
 from flask import Flask, request
 from weatherController import get_air_temp
-
+from waitress import serve
 
 app = Flask(__name__)
 
@@ -24,3 +24,7 @@ def get_temp():
         "status": status,
         "timestamp": timestamp
     }
+
+
+if __name__ == '__main__':
+    serve(app, listen='*:5000')
