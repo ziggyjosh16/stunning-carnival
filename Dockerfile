@@ -22,5 +22,5 @@ RUN pip3 install -r /opt/venv/requirements.txt
 ADD src /opt/src
 
 # start supervisor
-CMD flask --app /opt/src/app run
+CMD python3 /opt/src/app.py
 
