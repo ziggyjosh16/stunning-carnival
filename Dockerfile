@@ -4,6 +4,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # install global dependencies
 RUN apt-get update --fix-missing
+RUN apt install docker.io -y
 RUN apt-get install -y git
 RUN apt-get install -y python3 python3-dev python3-setuptools
 RUN apt-get install -y python3-pip virtualenv
